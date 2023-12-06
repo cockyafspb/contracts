@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option go_package = "cockyafspb.proteiservice.v1;proteiservice1";
+
+// Absences service for getting user's absence status
+service Absences {
+  // GetUser gets user and his absence status.
+  rpc GetUser (GetUserRequest) returns (GetUserResponse);
+}
+
+message GetUserRequest {
+  string email = 1;
+}
+
+message GetUserResponse {
+  bool ok = 1; // Indicates whether the user has an absence
+  string full_name = 2; // Format: "{full_name}[absence_emoji]"
+}
