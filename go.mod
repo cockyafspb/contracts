@@ -1,4 +1,4 @@
-module contracts
+module github.com/cockyafspb/contracts
 
 go 1.13
 
